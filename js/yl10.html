@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="et">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +12,63 @@
     <title>Ülesanne 10 &copy; </title>
 </head>
 <body>
-    
+    <form action="#" method="post" autocomplete="on">
+        <fieldset>
+            <legend>Isikuandmed</legend><br>
+            <label for="eesnimi"> Eesnimi</label><br>
+            <input type="text" id="eesnimi" name="eesnimi" maxlength="30" placeholder="nt Andre" required><br>
+            <label>(kuni 30 märki; nõutud; placeholder: nt Andre)</label><br><br>
+            <label for="perenimi"> Perenimi</label><br>
+            <input type="text" id="perenimi" name="perenimi" maxlength="30" placeholder="nt Pook" required><br>
+            <label>(kuni 30 märki; nõutud; placeholder: nt Andre)</label><br><br>
+            <label for="sünnikuupäev"> Sünnikuupäev</label><br>
+            <input type="date" id="sünnikuupäev" name="sünnikuupäev" value="1980-01-01" min="1950-01-01" max="2025-12-31" required><br>
+            <label>(min 1950-01-01; max 2025-12-31; vaikimisi 1980-01-01; nõutud)</label><br><br>
+            <label for="sugu"> Sugu</label><br>
+            <input type="radio" id="naine" name="sugu" value="naine" required> Naine
+            <input type="radio" id="mees" name="sugu" value="mees" required> Mees
+            <input type="radio" id="muu" name="sugu" value="muu" required> Muu
+        </fieldset>
+        <fieldset>
+            <legend>Kontakt</legend><br>
+            <label for="epost"> E-post</label><br>
+            <input type="text" id="epost" name="epost" placeholder="nimi@kool.ee" maxlength="100" required><br>
+            <label>(100 tähemärki; nõutud; placeholder: nt nimi@kool.ee)</label>
+            <label for="telefon"> Mobiiltelefon</label><br><br>
+            <input type="tel" id="telefon" name="telefon" pattern="^\+372\s?\d{7,8}$" placeholder="+372 51234567" required><br>
+            <label>(nõutav muster / pattern:^\+372\s?\d{7,8}$)</label><br><br>
+            <label for="aadress"> Aadress</label><br>
+            <textarea name="aadress" id="aadress" rows="4" cols="30" placeholder="Tänav, maja, korter" required></textarea><br><br>
+            <label for="linn_asula"> Linn/asula</label><br>
+            <input type="text" id="linn_asula" name="linn_asula" maxlength="30" placeholder="nt Tallinn" required><br>
+            <label>(kuni 30 märki; nõutud; placeholder: nt Tallinn)</label><br><br>
+            <label for="postiindeks"> Postiindeks</label><br>
+            <input type="text" name="postiindeks" id="postiindeks" placeholder="10111" pattern="^\d{5}$" required>
+            <label>(täpselt 5 numbrit; muster: ^\d{5}$)</label><br><br>
+            <label for="riik">Riik</label><br>
+            <input type="text" name="riik" id="riik" value="Eesti" readonly required>
+            <label>(muutumatu väli)</label><br><br>
+        </fieldset>
+        <fieldset>
+            <legend>Muu info</legend><br>
+            <label for="huvialad">Huvialad</label><br>
+            <input type="checkbox" name="huvialad" value="joonistamine"> Joonistamine
+            <input type="checkbox" name="huvialad" value="laulmine"> Laulmine
+            <input type="checkbox" name="huvialad" value="tantsimine"> Tantsimine
+            <input type="checkbox" name="huvialad" value="kokkamine"> Kokkamine
+            <br><input type="checkbox" name="huvialad" value="kokkamine"> Muu: <input type="text" maxlength="30" placeholder="(kuni 30 märki)"><br><br>
+            <label for="isiklik_veebileht">Isiklik veebileht</label><br>
+            <input type="text" name="isiklik_veebileht" id="isiklik_veebileht" placeholder="https://minuleht.ee"><br>
+            <label>(peab algama http:// või https://)</label><br><br>
+            <label for="eelistatud_teemavärv">Eelistatud teemavärv (valikuline)</label><br>
+            <input type="color" name="eelistatud_teemavärv" id="eelistatud_teemavärv"><br><br>
+            <label for="dokumendid">Dokumendid (PDF või pilt)</label><br>
+            <input type="file" name="dokumendid" id="dokumendid" accept=".pdf, .png, .jpg"><br><br>
+        </fieldset>
+        <fieldset>
+            <legend>Nõustumine</legend><br>
+            <input type="checkbox" required> Kinnitan, et esitatud andmed on õiged ja luban nende töötlemist vastavalt kooli tingimustele
+        </fieldset>
+    </form>
 </body>
 </html>
