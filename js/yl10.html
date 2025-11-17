@@ -12,11 +12,12 @@
     <title>Ülesanne 10 &copy; </title>
 </head>
 <body>
-    <form action="#" method="post" autocomplete="on">
+    <h1>ÕPILASE REGISTREERUMISVORM</h1>
+    <form action="#" method="get" autocomplete="on">
         <fieldset>
             <legend>Isikuandmed</legend><br>
-            <label for="eesnimi"> Eesnimi</label><br>
-            <input type="text" id="eesnimi" name="eesnimi" maxlength="30" placeholder="nt Andre" required><br>
+            <label for="fname"> Eesnimi</label><br>
+            <input type="text" id="fname" name="eesnimi" maxlength="30" placeholder="nt Andre" required><br>
             <label>(kuni 30 märki; nõutud; placeholder: nt Andre)</label><br><br>
             <label for="perenimi"> Perenimi</label><br>
             <input type="text" id="perenimi" name="perenimi" maxlength="30" placeholder="nt Pook" required><br>
@@ -24,7 +25,7 @@
             <label for="sünnikuupäev"> Sünnikuupäev</label><br>
             <input type="date" id="sünnikuupäev" name="sünnikuupäev" value="1980-01-01" min="1950-01-01" max="2025-12-31" required><br>
             <label>(min 1950-01-01; max 2025-12-31; vaikimisi 1980-01-01; nõutud)</label><br><br>
-            <label for="sugu"> Sugu</label><br>
+            <label> Sugu</label><br>
             <input type="radio" id="naine" name="sugu" value="naine" required> Naine
             <input type="radio" id="mees" name="sugu" value="mees" required> Mees
             <input type="radio" id="muu" name="sugu" value="muu" required> Muu
@@ -51,7 +52,7 @@
         </fieldset>
         <fieldset>
             <legend>Muu info</legend><br>
-            <label for="huvialad">Huvialad</label><br>
+            <label>Huvialad</label><br>
             <input type="checkbox" name="huvialad" value="joonistamine"> Joonistamine
             <input type="checkbox" name="huvialad" value="laulmine"> Laulmine
             <input type="checkbox" name="huvialad" value="tantsimine"> Tantsimine
